@@ -61,7 +61,6 @@ jobs:
             }
           }'
 
-          PROJECT_ID="20"
           PROJECT_ITEM_ID=$(gh api graphql \
             -f query="$ITEM_QUERY" \
             --jq '.data.node.projectItems.nodes[]
@@ -74,6 +73,21 @@ jobs:
           else
             echo "Project Item ID: $PROJECT_ITEM_ID"
           fi
+          
+          PROJECT_QUERY='
+          query {
+            user(login: "spzvtbg") {
+              projectV2(number: 20) {
+                id
+                title
+              }
+            }
+          }'
+          
+          PROJECT_ID=$(gh api graphql \
+              -f query="$PROJECT_QUERY" \
+              --jq '.data.user.projectV2.id')
+
 
           FIELDS_QUERY='
           query {
