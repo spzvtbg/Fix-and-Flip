@@ -1,11 +1,12 @@
 # Fix2Flip 
-- under construction
 
 **Fix2Flip** is a web-based application for analyzing, calculating, and managing real estate Fix-&-Flip investments.
 
 # Development Status
 
 The project is currently in the requirements definition and architecture planning phase. Implementation will follow once the core functional and non-functional requirements have been established.
+
+***under construction***
 
 # Project Objective
 
