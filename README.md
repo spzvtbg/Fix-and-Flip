@@ -19,6 +19,7 @@ Fix2Flip/
 ├── .github/
 │   └── ISSUE_TEMPLATE/
 │       └── documentation.yml
+│   └── workflows/
 ├── docs/
 │   ├── requirements/
 │   ├── use-cases/
