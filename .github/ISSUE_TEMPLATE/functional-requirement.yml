@@ -1,0 +1,64 @@
+name: Functional Requirement
+description: Define a functional requirement for Fix2Flip.
+title: "[FR] "
+labels: ["requirement"]
+
+body:
+  - type: input
+    id: requirement-id
+    attributes:
+      label: Requirement ID
+      description: Unique identifier for the functional requirement.
+      placeholder: FR-001
+    validations:
+      required: true
+
+  - type: input
+    id: requirement-title
+    attributes:
+      label: Requirement Title
+      description: Short and descriptive title.
+      placeholder: Register User Account
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Describe what the system shall do.
+      placeholder: The system shall...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: Define the importance of this requirement.
+      options:
+        - High
+        - Medium
+        - Low
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+      description: Define how the requirement can be verified.
+      placeholder: |
+        - [ ] ...
+        - [ ] ...
+    validations:
+      required: true
+
+  - type: input
+    id: related-use-cases
+    attributes:
+      label: Related Use Cases
+      description: Optional references to related use cases.
+      placeholder: UC-001
+    validations:
+      required: false
