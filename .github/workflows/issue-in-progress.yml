@@ -12,6 +12,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    
       - name: Get branch name
         env: 
           BRANCH_NAME: ${{ github.event.ref }}
@@ -25,3 +26,32 @@ jobs:
               echo "No action needed"
               exit 0
           fi 
+          
+      - name: Retrive issue information
+        env:
+          ISSUE_NUMBER: ${{ steps.issue.outputs.issue_number }}
+          GH_TOKEN: ${{ secrets.GH_PROJECT_TOKEN }} # auto recognized from the CLI
+        run: |
+          ISSUE_ID=$(gh issue view "$ISSUE_NUMBER" \
+          --repo spzvtbg/Fix-and-Flip \
+          --json id \
+          --jq '.id')
+          if [[ -z "$ISSUE_ID" ]]; then
+              echo "No issue found to process."
+              exit 0
+          else
+            echo "Successfully retrieved issue ID: $ISSUE_ID"
+          fi
+
+
+
+
+
+
+
+
+
+
+
+
+          
