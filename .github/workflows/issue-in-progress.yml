@@ -38,11 +38,10 @@ jobs:
           --repo spzvtbg/Fix-and-Flip \
           --json id \
           --jq '.id')
+          
           if [[ -z "$ISSUE_ID" ]]; then
-              echo "No issue found to process."
+              echo "No issue found."
               exit 0
-          else
-            echo "Successfully retrieved issue ID: $ISSUE_ID"
           fi
 
           ITEM_QUERY='
@@ -68,10 +67,8 @@ jobs:
                 | .id')
           
           if [[ -z "$PROJECT_ITEM_ID" ]]; then
-            echo "Project item not found. No action needed."
+            echo "No project item found"
             exit 0
-          else
-            echo "Project Item ID: $PROJECT_ITEM_ID"
           fi
           
           PROJECT_QUERY='
@@ -87,7 +84,11 @@ jobs:
           PROJECT_ID=$(gh api graphql \
               -f query="$PROJECT_QUERY" \
               --jq '.data.user.projectV2.id')
-
+          
+          if [[ -z "$PROJECT_ID" ]]; then
+              echo "No project id found."
+              exit 0
+          fi
 
           FIELDS_QUERY='
           query {
@@ -115,6 +116,12 @@ jobs:
               | select(.name == "Status")
               | .id
           ')
+          
+          if [[ -z "$STATUS_FIELD_ID" ]]; then
+              echo "No status field id found."
+              exit 0
+          fi
+          
           STATUS_OPTION_ID=$(echo "$FIELDS_RESULT" | jq -r '
               .data.node.fields.nodes[]
               | select(.id == "'"$STATUS_FIELD_ID"'")
@@ -122,6 +129,11 @@ jobs:
               | select(.name == "In Progress")
               | .id
           ')
+          
+          if [[ -z "$STATUS_OPTION_ID" ]]; then
+              echo "No status option id found."
+              exit 0
+          fi
 
           # Exports as variables to the output
           echo "project_id=$PROJECT_ID" >> "$GITHUB_OUTPUT"
