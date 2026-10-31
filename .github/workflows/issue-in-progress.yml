@@ -2,4 +2,9 @@ name: Move Issue to In Progress
 
 on:
   create: 
-  
+
+permissions:
+  contents: read
+  issues: read
+
+
