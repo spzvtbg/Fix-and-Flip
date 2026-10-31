@@ -21,8 +21,8 @@ Fix2Flip/
 │       └── documentation.yml
 │   └── workflows/
 ├── docs/
-│   ├── requirements/
+│   ├── architecture/
 │   ├── use-cases/
-│   └── architecture/
+│   └── requirements/
 ├── src/
 └── README.md
