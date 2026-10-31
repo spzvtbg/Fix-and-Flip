@@ -20,6 +20,7 @@ jobs:
           if [[ "$BRANCH_NAME" =~ ^(docs|test)/([0-9]+) ]]; then
               ISSUE_NUMBER="${BASH_REMATCH[2]}"
               echo "Issue number: $ISSUE_NUMBER"
+              echo "issue_number=$ISSUE_NUMBER" >> "$GITHUB_OUTPUT"
           else
               echo "No action needed"
               exit 0
