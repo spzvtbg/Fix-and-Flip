@@ -6,7 +6,7 @@
 
 The project is currently in the requirements definition and architecture planning phase. Implementation will follow once the core functional and non-functional requirements have been established.
 
-***under construction***
+***... under construction***
 
 # Project Objective
 
