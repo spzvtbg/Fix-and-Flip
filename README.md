@@ -1,2 +1,12 @@
-# Fix---Flip
-A web-based application for evaluating and managing potential Fix-&amp;-Flip properties, including property analysis, renovation cost estimation, profitability calculations, and actual cost tracking.
+# Fix2Flip 
+- under construction
+
+**Fix2Flip** is a web-based application for analyzing, calculating, and managing real estate Fix-&-Flip investments.
+
+# Development Status
+
+The project is currently in the requirements definition and architecture planning phase. Implementation will follow once the core functional and non-functional requirements have been established.
+
+# Project Objective
+
+Develop a maintainable application that provides a structured basis for real estate investment decisions by combining property analysis, renovation planning, financial calculations, and project cost tracking.
