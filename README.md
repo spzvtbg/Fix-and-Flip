@@ -11,3 +11,17 @@ The project is currently in the requirements definition and architecture plannin
 # Project Objective
 
 Develop a maintainable application that provides a structured basis for real estate investment decisions by combining property analysis, renovation planning, financial calculations, and project cost tracking.
+
+## Repository Structure
+
+```text
+Fix2Flip/
+├── .github/
+│   └── ISSUE_TEMPLATE/
+│       └── documentation.yml
+├── docs/
+│   ├── requirements/
+│   ├── use-cases/
+│   └── architecture/
+├── src/
+└── README.md
