@@ -15,7 +15,7 @@ jobs:
 
     env:
       GH_TOKEN: ${{ secrets.GH_PROJECT_TOKEN }}
-      PROJECT_NUMBER: "1" # Replace with your project number
+      PROJECT_NUMBER: "20"
 
     steps:
       - name: Extract issue number
