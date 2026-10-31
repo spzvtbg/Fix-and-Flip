@@ -15,4 +15,5 @@ jobs:
       - name: Get branch name
         env: 
           BRANCH_NAME: ${{ github.event.ref }}
-        run: echo "branch name: $BRANCH_NAME"        
+        run: | 
+          echo "branch name: $BRANCH_NAME"        
