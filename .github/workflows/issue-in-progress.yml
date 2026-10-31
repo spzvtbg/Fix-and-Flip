@@ -7,4 +7,12 @@ permissions:
   contents: read
   issues: read
 
+jobs:
+  move-issue:
+    runs-on: ubuntu-latest
 
+    steps:
+      - name: Get branch name
+        env: 
+          BRANCH_NAME: ${{ github.event.ref }}
+        run: echo "branch name: $BRANCH_NAME"        
