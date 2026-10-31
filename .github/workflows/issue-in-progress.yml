@@ -60,7 +60,8 @@ jobs:
               }
             }
           }'
-          
+
+          PROJECT_ID="20"
           PROJECT_ITEM_ID=$(gh api graphql \
             -f query="$ITEM_QUERY" \
             --jq '.data.node.projectItems.nodes[]
