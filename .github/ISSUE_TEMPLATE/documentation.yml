@@ -1,0 +1,25 @@
+name: Documentation Task
+description: Create or update project documentation.
+title: "[DOC] "
+labels: ["documentation"]
+
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Describe what needs to be documented or updated.
+      placeholder: Explain the documentation task.
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+      description: Define when the documentation task is considered complete.
+      placeholder: |
+        - [ ] Documentation is complete.
+        - [ ] Content is reviewed.
+    validations:
+      required: true
