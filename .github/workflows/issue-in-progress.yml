@@ -16,4 +16,11 @@ jobs:
         env: 
           BRANCH_NAME: ${{ github.event.ref }}
         run: | 
-          echo "branch name: $BRANCH_NAME"        
+          echo "branch name: $BRANCH_NAME"    
+          if [[ "$BRANCH_NAME" =~ ^(docs|test)/([0-9]+) ]]; then
+              ISSUE_NUMBER="${BASH_REMATCH[2]}"
+              echo "Issue number: $ISSUE_NUMBER"
+          else
+              echo "No action needed"
+              exit 0
+          fi 
