@@ -1,6 +1,6 @@
-# Fix2Flip 
+# Fix & Flip 
 
-**Fix2Flip** is a web-based application for analyzing, calculating, and managing real estate Fix-&-Flip investments.
+**Fix & Flip** is a web-based application for analyzing, calculating, and managing real estate Fix-&-Flip investments.
 
 # Development Status
 
@@ -15,7 +15,7 @@ Develop a maintainable application that provides a structured basis for real est
 ## Repository Structure
 
 ```text
-Fix2Flip/
+Fix & Flip/
 ├── .github/
 │   └── ISSUE_TEMPLATE/
 │       └── documentation.yml
