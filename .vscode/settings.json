@@ -1,0 +1,10 @@
+{
+  "emeraldwalk.runonsave": {
+    "commands": [
+      {
+        "match": "\\.uxf$",
+        "cmd": "${workspaceFolder}\\export-uml.bat"
+      }
+    ]
+  }
+}
